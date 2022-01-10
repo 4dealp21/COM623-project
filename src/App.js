@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import MyFridge from "./Components/my-fridge/myfridge";
+import Login from "./Components/my-fridge/login";
+
 
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
@@ -26,6 +28,7 @@ const App = () => (
   <Router> 
     <Routes>
       <Route path="/myfridge" element={<MyFridge />} />
+      <Route path="/login" element={<Login />} />
       <Route exact path="/" element={<Home />} />
     </Routes>
   </Router>
