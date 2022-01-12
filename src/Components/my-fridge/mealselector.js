@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styled, { keyframes } from 'styled-components';
 import Bar from './assets/bar.png';
-import {Link} from 'react-router-dom'
+import {Link} from 'react-router-dom';
 
 const StyledContainer = styled.div`
 
