@@ -4,7 +4,7 @@ import Bar from './assets/bar.png';
 import apple from './assets/apple.png';
 import carrot from './assets/carrot.png';
 import arrow from './assets/arrow.png';
-
+import {Link} from 'react-router-dom'
 
 const AppleAnimation = keyframes`
     0% {
@@ -160,9 +160,11 @@ const MyFridge = () => {
                         <StyledHeader>Hi <StyledBold>there!</StyledBold></StyledHeader>
                         <StyledHeader2>What's in your fridge today?</StyledHeader2>
                     </StyledHeaders>
-                    <Button>
-                        <Arrow src= {arrow} className="arrow" alt="" />
-                    </Button>
+                    <Link to="/ingredients">
+                        <Button>
+                            <Arrow src= {arrow} className="arrow" alt="" />
+                        </Button>
+                    </Link>
                 </StyledWrapper>
             </StyledContainer>
         </OuterWrapper>

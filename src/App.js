@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import MyFridge from "./Components/my-fridge/myfridge";
 import Login from "./Components/my-fridge/login";
+import Ingredients from "./Components/my-fridge/ingredients";
 
 
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
@@ -19,7 +20,7 @@ const Home = () => (
   <StyledWrapper>
   <nav>
     <h1>Contemporary web-apps</h1>
-        <Link to="/myfridge">here </Link>
+        <Link to="/login">here </Link>
   </nav>
   </StyledWrapper>
 );
@@ -29,6 +30,7 @@ const App = () => (
     <Routes>
       <Route path="/myfridge" element={<MyFridge />} />
       <Route path="/login" element={<Login />} />
+      <Route path="/ingredients" element={<Ingredients />} />
       <Route exact path="/" element={<Home />} />
     </Routes>
   </Router>

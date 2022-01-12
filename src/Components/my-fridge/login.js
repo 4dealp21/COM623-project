@@ -3,6 +3,15 @@ import styled, { keyframes } from 'styled-components';
 import Bar from './assets/bar.png';
 import apple from './assets/apple.png';
 import carrot from './assets/carrot.png';
+import { useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
+import * as yup from "yup";
+import {Link} from 'react-router-dom'
+
+const schema = yup.object().shape({
+    email: yup.string().required('Email is required').email('Not a valid email'),
+    password: yup.string().required('Password is required'),
+  });
 
 
 const OuterWrapper = styled.div`
@@ -68,7 +77,53 @@ const Carrot = styled.img`
     height: auto;
 `;
 
+const StyledInput = styled.input`
+    background: #FCFCFC;
+    border: 2px solid #B6C867;
+    border-radius: 15px;
+    width: 224px;
+    height: 32px;
+    padding-left: 10px;
+    font-size: 10px;
+`;
+
+const StyledButton = styled.button`
+    border: none;
+    color: white;
+    padding: 8px 100px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    margin: 4px 2px;
+    border-radius: 6px;
+    cursor: pointer;
+    background: #89B33B;
+    margin-top: 20px;
+    &:hover {
+        background: #7FA737;
+    }
+    &:active {
+        background: #4A3FFF;
+    }
+`;
+
+
 const Login = () => {
+
+    const [showPassword, setShowPassword] = useState(false);
+
+    const [submitted, setSubmitted] = useState(false);
+
+    const { register, handleSubmit, errors } = useForm({
+        resolver: yupResolver(schema)
+      });
+
+    const onSubmit = data => console.log(data);
+
+    const handleClick = (e) => {
+        setShowPassword(!showPassword);
+    };
 
     return (
 
@@ -80,6 +135,21 @@ const Login = () => {
                         <Apple src= {apple} className="apple" alt="" />
                         <Carrot src= {carrot} className="apple" alt="" />
                     </Fruit>
+                    <form onSubmit={handleSubmit(onSubmit)}>
+                        <p>
+                            <StyledInput type="text" name="email" placeholder="Email" ref={register()} />
+                        </p>
+
+                        <p>
+                            <StyledInput type={showPassword ? "text" : "password"} name="password" placeholder="Password" ref={register()} />
+                        </p>
+                        <p>
+                        <Link to="/myfridge">                            
+                            <StyledButton> Log in </StyledButton>
+                        </Link>
+
+                        </p>
+                </form>
                 </StyledWrapper>
             </StyledContainer>
         </OuterWrapper>
