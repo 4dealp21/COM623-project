@@ -7,6 +7,7 @@ import arrow from './assets/arrow.png';
 import {Link} from 'react-router-dom'
 
 const AppleAnimation = keyframes`
+
     0% {
         transform: rotate(0deg);
     }
@@ -16,9 +17,11 @@ const AppleAnimation = keyframes`
     100% {
         transform: rotate(0deg);
     }
+
 `;
 
 const CarrotAnimation = keyframes`
+
     0% {
         transform: rotate(0deg);
     }
@@ -28,103 +31,121 @@ const CarrotAnimation = keyframes`
     100% {
         transform: rotate(0deg);
     }
+
 `;
 
-const OuterWrapper = styled.div`
-    font-family: "Helvetica Neue", sans-serif;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    box-sizing: border-box;
-    background: #ffb057;
-`;
 
 const StyledContainer = styled.div`
-    position: absolute;
-    width:308px;
-    height: 615px;
+
+  @media (max-width: 320px) {
+      max-width: 100%;
+      overflow-x: hidden;
+      font-family: "Helvetica Neue", sans-serif;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      box-sizing: border-box;
+      position: absolute;
+  }
 `;
 
 const StyledWrapper = styled.div`
-    display: flex;
-    flex-direction: column;
+  @media (max-width: 320px) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100vw;
+      background: #fcfcfc;
+  }
+`;
+
+const StyledBar = styled.img`
+@media (max-width: 320px) {
+    top: 0;
+    margin-top: 20px;
+    position: fixed;
+    width: 290px;
+    height: auto;
     justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: auto;
-    margin: auto;
-    z-index: 1;
-    background: #fcfcfc;
-    box-shadow: 0px 0px 20px rgb(0, 0, 0, 0.05);
+    z-index: 2;
+}
 `;
 
 const StyledHeaders = styled.div`
+@media (max-width: 320px) {
     position: relative;
     text-align: left;
     justify-content: center;
     width: 70%;
+}
 `;
 
 const StyledHeader = styled.h1`
+@media (max-width: 320px) {
     color: #696969;
     font-weight: 900;
     font-size: 34px;
     font-family: 'Helvetica Neue', sans-serif;
     margin-bottom: -10px;
+}
 `;
 
 const StyledHeader2 = styled.h2`
+@media (max-width: 320px) {
     color: #696969;
     font-weight: 900;
     font-size: 24px;
     font-family: 'Helvetica Neue', sans-serif;
+}
 `;
 
 const StyledBold = styled.span`
+@media (max-width: 320px) {
     color: #89B33B;
     font-weight: 900;
     font-size: 34px;
     font-family: 'Helvetica Neue', sans-serif;
+}
 `;
 
-const StyledBar = styled.img`
-    position: absolute;
-    top: 0;
-    padding-top: 15px;
-    width: 290px;
-    height: auto;
-    justify-content: center;
-`;
 
 const Fruit = styled.div`
+@media (max-width: 320px) {
     position: relative;
     justify-content: space-between;
     display: flex;
     z-index: 1;
     padding: 10px 0px 40px 0px;
     margin-top: -90px;
+}
 `;
 
 const Apple = styled.img`
+@media (max-width: 320px) {
     margin-left: 60px; 
     position: relative;
     width: 82px;
     height: auto;
     animation: 2s ${AppleAnimation} ease-in-out infinite;
+}
 `;
 
 const Carrot = styled.img`
+@media (max-width: 320px) {
     margin-right: 60px; 
     position: relative;
     width: 82px;
     height: auto;
     animation: 2s ${CarrotAnimation} ease-in-out infinite;
+}
 `;
 
 const Button = styled.button`
+@media (max-width: 320px) {
     border: none;
     color: white;
     padding: 8px 100px;
@@ -136,19 +157,21 @@ const Button = styled.button`
     cursor: pointer;
     background: #89B33B;
     margin-top: 20px;
+}
 `;
 
 const Arrow = styled.img`
+@media (max-width: 320px) {
     width: 26px;
     height: auto;
     padding-top: 2px;
+}
 `;
 
 const MyFridge = () => {
 
     return (
 
-        <OuterWrapper>
             <StyledContainer>
                 <StyledWrapper>
                     <StyledBar src= {Bar} className="bar" alt="" />
@@ -167,7 +190,6 @@ const MyFridge = () => {
                     </Link>
                 </StyledWrapper>
             </StyledContainer>
-        </OuterWrapper>
 
     )
 

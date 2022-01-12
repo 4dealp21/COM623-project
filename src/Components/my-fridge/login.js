@@ -14,70 +14,77 @@ const schema = yup.object().shape({
   });
 
 
-const OuterWrapper = styled.div`
-    font-family: "Helvetica Neue", sans-serif;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    box-sizing: border-box;
-    background: #ffb057;
-`;
-
 const StyledContainer = styled.div`
-    position: absolute;
-    width:308px;
-    height: 615px;
+
+  @media (max-width: 320px) {
+      max-width: 100%;
+      overflow-x: hidden;
+      font-family: "Helvetica Neue", sans-serif;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      box-sizing: border-box;
+      position: absolute;
+  }
 `;
 
 const StyledWrapper = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: auto;
-    margin: auto;
-    z-index: 1;
-    background: #fcfcfc;
-    box-shadow: 0px 0px 20px rgb(0, 0, 0, 0.05);
+  @media (max-width: 320px) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100vw;
+      background: #fcfcfc;
+  }
 `;
 
 const StyledBar = styled.img`
-    position: absolute;
+@media (max-width: 320px) {
     top: 0;
-    padding-top: 15px;
+    margin-top: 20px;
+    position: fixed;
     width: 290px;
     height: auto;
     justify-content: center;
+    z-index: 2;
+}
 `;
 
 const Fruit = styled.div`
+@media (max-width: 320px) {
     position: relative;
     justify-content: space-between;
     display: flex;
     z-index: 1;
     padding: 10px 0px 40px 0px;
     margin-top: -90px;
+}
 `;
 
 const Apple = styled.img`
+@media (max-width: 320px) {
     margin-left: 60px; 
     position: relative;
     width: 82px;
     height: auto;
+}
 `;
 
 const Carrot = styled.img`
+@media (max-width: 320px) {
     margin-right: 60px; 
     position: relative;
     width: 82px;
     height: auto;
+}
 `;
 
 const StyledInput = styled.input`
+@media (max-width: 320px) {
     background: #FCFCFC;
     border: 2px solid #B6C867;
     border-radius: 15px;
@@ -85,9 +92,11 @@ const StyledInput = styled.input`
     height: 32px;
     padding-left: 10px;
     font-size: 10px;
+}
 `;
 
 const StyledButton = styled.button`
+@media (max-width: 320px) {
     border: none;
     color: white;
     padding: 8px 100px;
@@ -106,6 +115,7 @@ const StyledButton = styled.button`
     &:active {
         background: #4A3FFF;
     }
+}
 `;
 
 
@@ -127,7 +137,6 @@ const Login = () => {
 
     return (
 
-        <OuterWrapper>
             <StyledContainer>
                 <StyledWrapper>
                     <StyledBar src= {Bar} className="bar" alt="" />
@@ -152,7 +161,6 @@ const Login = () => {
                 </form>
                 </StyledWrapper>
             </StyledContainer>
-        </OuterWrapper>
 
     )
 

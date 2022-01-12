@@ -3,6 +3,7 @@ import styled from "styled-components";
 import MyFridge from "./Components/my-fridge/myfridge";
 import Login from "./Components/my-fridge/login";
 import Ingredients from "./Components/my-fridge/ingredients";
+import MealSelector from "./Components/my-fridge/mealselector";
 
 
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
@@ -31,6 +32,7 @@ const App = () => (
       <Route path="/myfridge" element={<MyFridge />} />
       <Route path="/login" element={<Login />} />
       <Route path="/ingredients" element={<Ingredients />} />
+      <Route path="/mealselector" element={<MealSelector />} />
       <Route exact path="/" element={<Home />} />
     </Routes>
   </Router>

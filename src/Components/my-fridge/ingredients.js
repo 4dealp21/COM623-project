@@ -285,8 +285,6 @@ const Ingredients = () => {
             </StyledContainer>
 
     )
-
 };
-
 
 export default Ingredients;
