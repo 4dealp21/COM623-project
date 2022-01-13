@@ -84,6 +84,7 @@ const IngredientContainer = styled.div`
 
 const StyledHeader = styled.h1`
 @media (max-width: 320px) {
+    margin-top: 30px;
     margin-left: -15px;
     color: #3B3B3B;
     font-weight: 900;
