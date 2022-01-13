@@ -8,7 +8,6 @@ import MealPage1 from "./Components/my-fridge/mealpage1";
 import MealPage2 from "./Components/my-fridge/mealpage2";
 import MealPage3 from "./Components/my-fridge/mealpage3";
 
-
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 const StyledWrapper = styled.div`

@@ -57,9 +57,8 @@ const StyledBar = styled.img`
 
 const ImageContainer = styled.div`
 @media (max-width: 320px) {
-    width: 100%;
-    height: 25%;
-    position absolute;
+    width: 320px;
+    position: absolute;
     top: 0;
 }
 `;
@@ -67,6 +66,55 @@ const ImageContainer = styled.div`
 const MealPicture = styled.img`
 @media (max-width: 320px) {
 }
+`;
+
+const StyledHeaders = styled.div`
+    @media (max-width: 320px) {
+    margin-top: 30px;
+    position: relative;
+    text-align: left;
+    justify-content: center;
+    width: 85%;
+    }
+`;
+
+const StyledHeader = styled.h1`
+@media (max-width: 320px) {
+    margin-top: -80px;
+    color: #3B3B3B;
+    font-weight: 900;
+    font-size: 28px;
+    font-family: 'Helvetica Neue', sans-serif;
+    position: relative;
+}
+`;
+
+const StyledHeader2 = styled.h2`
+@media (max-width: 320px) {
+    color: #5C5C5C;
+    font-weight: 700;
+    font-size: 24px;
+    font-family: 'Helvetica Neue', sans-serif;
+}
+`;
+
+const StyledHeader3 = styled.h3`
+@media (max-width: 320px) {
+    color: #89B33B;
+    font-weight: 400;
+    font-size: 20px;
+    font-family: 'Helvetica Neue', sans-serif;
+}
+`;
+
+const List = styled.ul`
+    position: relative;
+    margin-right: 100px;
+`;
+
+const BulletPoint = styled.li`
+    color: #89B33B;
+    padding: 5px 0 5px 0;
 `;
 
 
@@ -82,6 +130,24 @@ const Meal1 = () => {
                     <Link to="/mealselector">
                         <StyledBackArrow src= {BackArrow} className="back_arrow" alt="" />
                     </Link>
+                <StyledHeaders style={{marginTop: '670px'}}>
+                    <StyledHeader>Chicken Tomato Salad</StyledHeader>
+                    <StyledHeader2>Ingredients</StyledHeader2>
+                </StyledHeaders>
+                <List>
+                    <BulletPoint><b style={{color: 'black', fontWeight: '400'}}>1x Chicken Breast</b></BulletPoint>
+                    <BulletPoint><b style={{color: 'black', fontWeight: '400'}}>200g Noodles</b></BulletPoint>
+                    <BulletPoint><b style={{color: 'black', fontWeight: '400'}}>2x Tomatoes</b></BulletPoint>
+                    <BulletPoint><b style={{color: 'black', fontWeight: '400'}}>Garden Peas</b></BulletPoint>
+                    <BulletPoint><b style={{color: 'black', fontWeight: '400'}}>Mushrooms</b></BulletPoint>
+                </List>
+                <StyledHeaders>
+                    <StyledHeader2 style={{position: 'relative', marginTop: '-20px'}}>Method</StyledHeader2>
+                    <StyledHeader3 style={{position: 'relative'}}>Step 1</StyledHeader3>
+                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et</p>
+                    <StyledHeader3 style={{position: 'relative'}}>Step </StyledHeader3>
+                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et</p>
+                </StyledHeaders>
             </StyledWrapper>
         </StyledContainer>
     )
