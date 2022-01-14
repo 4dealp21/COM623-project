@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter, Router, Routes, Route, Link } from "react-router-dom";
 import MyFridge from "./Components/my-fridge/myfridge";
 import Login from "./Components/my-fridge/login";
 import Ingredients from "./Components/my-fridge/ingredients";
@@ -28,8 +28,8 @@ const Home = () => (
 );
 
 const App = () => (
-  <Router basename='/'> 
-    <Routes>
+  <Router> 
+      <BrowserRouter basename={process.env.PUBLIC.URL}>
       <Route path="/myfridge" element={<MyFridge />} />
       <Route path="/login" element={<Login />} />
       <Route path="/ingredients" element={<Ingredients />} />
@@ -38,7 +38,7 @@ const App = () => (
       <Route path="/mealpage2" element={<MealPage2 />} />
       <Route path="/mealpage3" element={<MealPage3 />} />
       <Route exact path="/" element={<Home />} />
-    </Routes>
+    </BrowserRouter>
   </Router>
 );
 
