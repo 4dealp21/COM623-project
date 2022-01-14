@@ -274,5 +274,35 @@ The following is a screenshot of the programme at this stage:
 
 ---
 
+#### Meal Selector
+
+This screen is where the user is chooses one meal between the variety of meals that the app proposes to him based on the previous inputs on the ingredients page.
+
+This page was simple and fun to create. Each meal has its own image, name, and details, such as the duration that takes to make the dish and its difficulty in a scale of 0 to 5.
+
+In this page, a new feature can be seen on the arrow on the top right corner of the screen. It's quite easy, the arrow consists on a Link to the ingredients page that can be used if the user forgets about any ingredient, or for some reason wants to revisit the previous page.
+
+Not much to say there, each meal has its seperate page, as it will be seen on the next point.
+
+Results can be seen here:
+
+<img src="./src/Components/my-fridge/assets/meal-selector-screen.png" alt="" style="zoom:50%;" />
+
+---
+
+#### Meal Screen
+
+These pages consist on the recipe of each meal. The page has the same feature than before that can send users to the previous page, it too has the the image of the meal on the top of the page, than the ingredients needed to cook the dish with the respective quantity and the steps to make the dish. 
+
+Due to lack of time to make an individual page, lorem ipsum was utilised as a placeholder to represent possible text areas that would later be replaced with appropriate text.
+
+
+
+<img src="./src/Components/my-fridge/assets/meal-screen.png" alt="" style="zoom:50%;" />
+
+
+
+---
+
 ## Conclusion
 
