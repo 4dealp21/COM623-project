@@ -163,7 +163,23 @@ export default App;
 
 ### Components
 
-#### Login
+The "Link" from ```react-router-dom``` was used on buttons to establish a connection between screens. Its usage on the code can be seen on the code block below:
+
+```react
+import {Link} from 'react-router-dom'
+
+const Home = () => (
+
+  <StyledWrapper>
+  <nav>
+    <h1>Contemporary web-apps</h1>
+        <Link to="/login">here </Link>
+  </nav>
+  </StyledWrapper>
+);
+```
+
+#### Login 
 
 The login page is quite simple. Since I was designing the app on Adobe XD, I tried to make it look as simple, minimalist and clean as possible. There are few input boxes, text and images. Everything about the page is direct to the point, a simple login mechanism.
 
@@ -174,6 +190,87 @@ To do so, a branch was created in a previous commit and then merged with the mas
 The login page can be seen on the screenshot below:
 
 <img src="./src/Components/my-fridge/assets/login-screen.png" alt="login screen" style="zoom:50%;" />
+
+---
+
+#### Welcome Screen
+
+After hitting the Log in button on the Login Screen, the user will be redirected to the my ```fridge.js```, this page consists on a welcoming message where the fruit images from the login page start to move around and welcome the user. It's a simple but useful page, once it can convey a sense of happiness to the user on its return to the app.
+
+The effect is made possible by ```@keyframes ``` and rotation animation. The code used can be seen below:
+
+```react
+import React, { useState } from "react";
+import styled, { keyframes } from 'styled-components';
+import apple from './assets/apple.png';
+import carrot from './assets/carrot.png';
+
+const AppleAnimation = keyframes`
+
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(-35deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+
+`;
+
+const CarrotAnimation = keyframes`
+
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(35deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+
+`;
+
+const Apple = styled.img`
+@media (max-width: 320px) {
+    margin-left: 60px; 
+    position: relative;
+    width: 82px;
+    height: auto;
+    animation: 2s ${AppleAnimation} ease-in-out infinite;
+}
+`;
+
+const Carrot = styled.img`
+@media (max-width: 320px) {
+    margin-right: 60px; 
+    position: relative;
+    width: 82px;
+    height: auto;
+    animation: 2s ${CarrotAnimation} ease-in-out infinite;
+}
+`;
+```
+
+And the results can be seen in this next screencast:
+
+<img src="./src/Components/my-fridge/assets/welcome.gif" alt="login screen" style="zoom:50%;" />
+
+---
+
+#### Ingredients
+
+In this screen a variety of meat, fish, sides and vegetables are shown to the user. It's prompt to the user to click on every button that relates to the ingredient that he has at home. The program then would based on the user's selections present an array of meals that are possible to be cooked.
+
+This page has a few errors. Although I worked hard to make this page to operate, once this screen is considered the main core of the programme, the effort was insufficient, and the app does not meet the expected and cannot accomplish its main duty due to poor time management and lack expertise on the issue.
+
+There are several small issues, such as horizontal scrolling that does not scroll far enough to the left, causing the final item to show partially on the screen. The other problem is seen when the user attempts to click the item button. The button's border was meant to become green, but it doesn't. I was almost there, but the only step I could make at this point was to have it change appearance when active, which meant that if the user clicked and then moved the cursor, the button's appearance would return to normal.
+
+The following is a screenshot of the programme at this stage:
+
+<img src="./src/Components/my-fridge/assets/ingredients-screen.png" alt="" style="zoom:50%;" />
 
 ---
 
