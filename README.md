@@ -300,9 +300,13 @@ Due to lack of time to make an individual page, lorem ipsum was utilised as a pl
 
 <img src="./src/Components/my-fridge/assets/meal-screen.png" alt="" style="zoom:50%;" />
 
-
-
 ---
 
 ## Conclusion
+
+As is common in most academic projects, a lack of time management can have a significant impact on the ultimate product's delivery. This project was no exception. A time management issue led the creation of a basic prototype.
+
+If I had more time to complete the project or if I had spent my time more wisely, I would have concentrated more on the mechanisms underlying the pages rather than the appearance of the displays. The attention would then shift to small flaws that may jeopardise the application's functionality, such as a button that didn't alter its look when pressed and better customising the meal pages so that each page could be unique. another thing that should have been developed better is the landing page, and as the app only works for mobile, once the user opened the browser, there should be a message telling the user to scale down the page so the content can be properly seen.
+
+Even though, there were quite a lot of problems in the development of this app, I think that this assessment was fun to do and wish that could have managed my time better. Definitely had a lot of fun while doing the task and learned a lot of new react features.
 
