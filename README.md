@@ -157,7 +157,7 @@ export default App;
 
 
 
-<img src="./src/Components/my-fridge/assets/home-blank.png" alt="design thinking" style="zoom:50%;" />
+<img src="./src/Components/my-fridge/assets/home-blank.png" alt="home blank" style="zoom:50%;" />
 
 ---
 
@@ -173,7 +173,7 @@ To do so, a branch was created in a previous commit and then merged with the mas
 
 The login page can be seen on the screenshot below:
 
-![login screen](/Users/tamagotchi/Desktop/COM623-project/src/Components/my-fridge/assets/login-screen.png)
+<img src="./src/Components/my-fridge/assets/login-screen.png" alt="login screen" style="zoom:50%;" />
 
 ---
 
