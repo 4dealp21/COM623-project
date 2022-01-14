@@ -9,7 +9,6 @@ import MealPage1 from "./Components/my-fridge/mealpage1";
 import MealPage2 from "./Components/my-fridge/mealpage2";
 import MealPage3 from "./Components/my-fridge/mealpage3";
 
-
 const StyledWrapper = styled.div`
     height: 50vh;
     display: flex;
@@ -29,7 +28,7 @@ const Home = () => (
 );
 
 const App = () => (
-  <Router> 
+  <Router basename='/'> 
     <Routes>
       <Route path="/myfridge" element={<MyFridge />} />
       <Route path="/login" element={<Login />} />
@@ -44,3 +43,4 @@ const App = () => (
 );
 
 export default App;
+
