@@ -92,16 +92,90 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 **react-router-dom** - React Router DOM can be used to construct dynamic routing in a web project. Unlike traditional routing architecture, which handles routing in a configuration outside of a live app, React Router DOM enables component-based routing based on the demands of the app and platform.
 
+
+
+The following code shows us the use of ```react-touter-dom``` on my react web app:
+
+```react
+const App = () => (
+  <Router> 
+    <Routes>
+      <Route path="/myfridge" element={<MyFridge />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/ingredients" element={<Ingredients />} />
+      <Route path="/mealselector" element={<MealSelector />} />
+      <Route path="/mealpage1" element={<MealPage1 />} />
+      <Route path="/mealpage2" element={<MealPage2 />} />
+      <Route path="/mealpage3" element={<MealPage3 />} />
+      <Route exact path="/" element={<Home />} />
+    </Routes>
+  </Router>
+);
+
+export default App;
+```
+
+
+
+The code for ```App.js``` at the time:
+
+```react
+import React from "react";
+import styled from "styled-components";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import MyFridge from "./Components/my-fridge/myfridge";
+
+const StyledWrapper = styled.div`
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+`;
+
+const Home = () => (
+
+  <StyledWrapper>
+  <nav>
+    <h1>Contemporary web-apps</h1>
+        <Link to="/login">here </Link>
+  </nav>
+  </StyledWrapper>
+);
+
+const App = () => (
+  <Router> 
+    <Routes>
+      <Route path="/myfridge" element={<MyFridge />} />
+      <Route exact path="/" element={<Home />} />
+    </Routes>
+  </Router>
+);
+
+export default App;
+```
+
+
+
+<img src="./src/Components/my-fridge/assets/home-blank.png" alt="design thinking" style="zoom:50%;" />
+
+---
+
+### Components
+
+#### Login
+
+The login page is quite simple. Since I was designing the app on Adobe XD, I tried to make it look as simple, minimalist and clean as possible. There are few input boxes, text and images. Everything about the page is direct to the point, a simple login mechanism.
+
+Sadly, the login was not implemented on the page, mainly due to poor time management. I tried to connect the App to a database hosted on firebase, turns out that was the most stressful part of this project once I couldn't make it the work and it somehow turned the other pages blank. Quite intriguing, I tried to solve this matter so I could continue with the login page but, which eventually led to no progress. The solution was to "go back in time" using git version control.
+
+To do so, a branch was created in a previous commit and then merged with the master branch.
+
+The login page can be seen on the screenshot below:
+
+![login screen](/Users/tamagotchi/Desktop/COM623-project/src/Components/my-fridge/assets/login-screen.png)
+
 ---
 
 ## Conclusion
 
-The modal was chosen as the last component of this project because, when utilised correctly and at the proper moment, it may be highly beneficial to the user and not an irritating additional hurdle between the user and his search.
-
-
-
-This was by far the most challenging and time-consuming component of them all.
-
-
-
-It is possible to conclude that, when used appropriately and in accordance with the standards (as was the case), the modal is a great addition to some websites, improving the user experience.
