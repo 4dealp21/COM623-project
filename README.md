@@ -13,7 +13,7 @@
 This repository was developed to showcase a mobile react based web application that helps students of Solent University to mantain a helthy diet and save them some time and money.
 
 
-
+![design thinking](./src/Components/my-fridge/assets/design-thinking-2.png)
 
 
 This project follows the Design Thinking methodology as a lens (see Figure 1) and the part of the work done on this repository is represented by the Prototype and Test phases of the overarching DT methodology.
