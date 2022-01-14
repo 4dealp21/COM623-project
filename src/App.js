@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import MyFridge from "./Components/my-fridge/myfridge";
 import Login from "./Components/my-fridge/login";
 import Ingredients from "./Components/my-fridge/ingredients";
@@ -8,7 +9,6 @@ import MealPage1 from "./Components/my-fridge/mealpage1";
 import MealPage2 from "./Components/my-fridge/mealpage2";
 import MealPage3 from "./Components/my-fridge/mealpage3";
 
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 const StyledWrapper = styled.div`
     height: 50vh;
