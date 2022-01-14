@@ -15,7 +15,7 @@ This repository was developed to showcase a mobile react based web application t
 
 ![design thinking](./src/Components/my-fridge/assets/design-thinking-2.png)
 
-								**Figure 1**, The design thinking methodology, adapted from Interaction Design Foundation (n.d.).
+**Figure 1**, The design thinking methodology, adapted from Interaction Design Foundation (n.d.).
 
 This project follows the Design Thinking methodology as a lens (see Figure 1) and the part of the work done on this repository is represented by the Prototype and Test phases of the overarching DT methodology.
 
